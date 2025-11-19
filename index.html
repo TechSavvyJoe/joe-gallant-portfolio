@@ -85,8 +85,9 @@
                         <em class="text-blue-600 font-semibold">"How can we solve this better?"</em>
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://calendar.app.google/Q1szsqeUGkGkXvay5" target="_blank" class="btn-primary"><i
-                                class="fas fa-calendar-check mr-2"></i> Book Interview</a>
+                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true"
+                            target="_blank" class="btn-primary"><i class="fas fa-calendar-check mr-2"></i> Book
+                            Interview</a>
                         <a href="Joe_Gallant_Resume.pdf" download class="btn-secondary"><i
                                 class="fas fa-file-download mr-2"></i> Resume</a>
                     </div>
@@ -417,7 +418,8 @@
             <p class="text-blue-100 text-xl mb-12 font-light">I'm currently open to roles in <strong
                     class="font-bold">Client Success, District Management, or Strategic Partnerships</strong>.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                <a href="https://calendar.app.google/Q1szsqeUGkGkXvay5" target="_blank" class="contact-btn primary">
+                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true"
+                    target="_blank" class="contact-btn primary">
                     <i class="fas fa-calendar-check"></i> Book Interview
                 </a>
                 <a href="mailto:joegallant@icloud.com" class="contact-btn secondary">
@@ -628,6 +630,24 @@
             </div>
         </div>
     </div>
+
+    <!-- Google Calendar Appointment Scheduling begin -->
+    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+    <script>
+        (function () {
+            var target = document.currentScript;
+            window.addEventListener('load', function () {
+                calendar.schedulingButton.load({
+                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true',
+                    color: '#2563eb',
+                    label: 'Book Interview',
+                    target,
+                });
+            });
+        })();
+    </script>
+    <!-- end Google Calendar Appointment Scheduling -->
 
     <script src="script.js"></script>
 </body>
