@@ -85,8 +85,8 @@
                         <em class="text-blue-600 font-semibold">"How can we solve this better?"</em>
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true"
-                            target="_blank" class="btn-primary"><i class="fas fa-calendar-check mr-2"></i> Book
+                        <a onclick="openModal('modal-appointment')" class="btn-primary cursor-pointer"><i
+                                class="fas fa-calendar-check mr-2"></i> Book
                             Interview</a>
                         <a href="Joe_Gallant_Resume.pdf" download class="btn-secondary"><i
                                 class="fas fa-file-download mr-2"></i> Resume</a>
@@ -418,10 +418,9 @@
             <p class="text-blue-100 text-xl mb-12 font-light">I'm currently open to roles in <strong
                     class="font-bold">Client Success, District Management, or Strategic Partnerships</strong>.</p>
             <div class="flex flex-col sm:flex-row justify-center gap-6 mb-16">
-                <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true"
-                    target="_blank" class="contact-btn primary">
+                <button onclick="openModal('modal-appointment')" class="contact-btn primary cursor-pointer">
                     <i class="fas fa-calendar-check"></i> Book Interview
-                </a>
+                </button>
                 <a href="mailto:joegallant@icloud.com" class="contact-btn secondary">
                     <i class="fas fa-envelope"></i> Email Me
                 </a>
@@ -648,6 +647,23 @@
         })();
     </script>
     <!-- end Google Calendar Appointment Scheduling -->
+
+    <div id="modal-appointment" class="modal-wrapper">
+        <div class="modal-content" style="height: 85vh; max-width: 1000px; display: flex; flex-direction: column;">
+            <div class="modal-header">
+                <div>
+                    <h3>Book an Interview</h3>
+                    <p>Select a time that works for you</p>
+                </div>
+                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body" style="padding: 0; flex: 1; overflow: hidden;">
+                <iframe
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true"
+                    style="border: 0; width: 100%; height: 100%;" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
