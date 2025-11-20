@@ -43,24 +43,37 @@
                         class="text-4xl md:text-5xl font-serif font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all duration-300">Joe
                         Gallant</a>
                 </div>
-                <div class="hidden md:flex items-center space-x-8 font-semibold">
-                    <a href="#about" class="nav-link">About</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#philosophy" class="nav-link">Philosophy</a>
+                    <a href="#skills" class="nav-link">Skills</a>
                     <a href="#experience" class="nav-link">Experience</a>
-                    <a href="#skills" class="nav-link">Expertise</a>
-                    <a href="#contact" class="btn-primary">Let's Talk</a>
+                    <a href="#reviews" class="nav-link">Reviews</a>
+                    <a href="#contact" class="btn-secondary">Get in Touch</a>
+
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
                 </div>
-                <button onclick="toggleMobileMenu()" class="md:hidden text-gray-700 hover:text-blue-600 p-2">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle Dark Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t shadow-2xl">
-            <a href="#about" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">About</a>
-            <a href="#experience" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">Experience</a>
-            <a href="#skills" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">Expertise</a>
-            <a href="#contact" onclick="toggleMobileMenu()"
-                class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
-        </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t shadow-2xl">
+                <a href="#about" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">About</a>
+                <a href="#experience" onclick="toggleMobileMenu()"
+                    class="block px-6 py-4 hover:bg-blue-50">Experience</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">Expertise</a>
+                <a href="#contact" onclick="toggleMobileMenu()"
+                    class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
+            </div>
     </nav>
 
     <!-- Hero Section -->
@@ -69,50 +82,84 @@
         <div class="hero-particles"></div>
 
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="text-center lg:text-left reveal">
-                    <div class="badge-available">
-                        <span class="pulse-dot"></span> Available for Hire
+            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+                <div class="hero-content space-y-8">
+                    <div class="inline-block animate-fade-in">
+                        <!-- Availability Dashboard -->
+                        <div class="availability-dashboard">
+                            <div class="dashboard-header">
+                                <span class="pulse-dot"></span>
+                                <span class="dashboard-title">Current Status</span>
+                            </div>
+                            <div class="dashboard-grid">
+                                <div class="status-item">
+                                    <span class="status-dot available"></span>
+                                    <span class="status-label">Consulting</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot available"></span>
+                                    <span class="status-label">Full-Time</span>
+                                </div>
+                                <div class="status-item">
+                                    <span class="status-dot limited"></span>
+                                    <span class="status-label">Speaking</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h1 class="text-6xl lg:text-8xl font-serif font-black mb-6 leading-tight">
-                        Innovating<br>
-                        <span class="text-gradient">Automotive Retail</span>
+                    <h1 class="text-5xl lg:text-7xl font-serif font-black leading-tight animate-slide-up">
+                        Modernizing <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Automotive
+                            Retail</span>
                     </h1>
-                    <p class="text-xl lg:text-2xl text-gray-600 mb-10 leading-relaxed font-light">
-                        I help dealerships bridge the gap between traditional sales and modern AI technology.
-                        <span class="font-medium text-gray-800">Analytical, creative, and driven by one
-                            question:</span><br>
-                        <em class="text-blue-600 font-semibold">"How can we solve this better?"</em>
+                    <p class="text-xl text-gray-600 max-w-lg leading-relaxed animate-slide-up delay-100">
+                        Bridging the gap between traditional dealership operations and the AI-driven future.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                        <div id="calendar-button-hero"></div>
-                        <a href="Joe_Gallant_Resume.pdf" download class="btn-secondary"><i
-                                class="fas fa-file-download mr-2"></i> Resume</a>
-                    </div>
-                    <div class="mt-6 flex gap-4 justify-center lg:justify-start text-sm text-gray-500 font-medium">
-                        <a href="#personal" class="hover:text-blue-600 transition flex items-center gap-2"><i
-                                class="fas fa-user"></i> Get to Know Me</a>
+                    <div class="flex flex-wrap gap-4 animate-slide-up delay-200">
+                        <a href="#contact" class="btn-primary">
+                            Start the Transformation
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#experience" class="btn-secondary">View Track Record</a>
                     </div>
                 </div>
 
-                <div class="lg:block relative reveal delay-200">
-                    <div class="profile-container">
-                        <div class="profile-ring"></div>
-                        <div class="profile-glow"></div>
-                        <div class="profile-image-wrapper">
-                            <img src="joe-gallant.jpg" alt="Joe Gallant - Strategic Automotive Consultant"
-                                class="profile-image">
-                        </div>
-                        <div class="profile-badge">
-                            <i class="fas fa-map-marker-alt text-blue-600"></i>
-                            <div>
-                                <p class="text-xs font-bold text-gray-500">BASED IN</p>
-                                <p class="font-black text-gray-900">St. Clair Shores, MI</p>
+                <!-- 3D Hero Element -->
+                <div class="hero-visual relative hidden lg:block" id="hero-visual">
+                    <div class="hero-3d-container">
+                        <div class="hero-card-glass">
+                            <div class="card-content">
+                                <i class="fas fa-brain text-4xl text-blue-600 mb-4"></i>
+                                <h3>AI Strategy</h3>
+                                <p>Data-driven decisions</p>
                             </div>
+                        </div>
+                        <div class="hero-card-glass card-2">
+                            <div class="card-content">
+                                <i class="fas fa-chart-line text-4xl text-indigo-600 mb-4"></i>
+                                <h3>Growth</h3>
+                                <p> measurable results</p>
+                            </div>
+                        </div>
+                        <div class="hero-main-image">
+                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzNPwDipnVkFsVeIuuBWL3dQrycf_7cvmKgqtYaKS-n_cp7RSz=s500-c-rp-mo-br100"
+                                alt="Joe Gallant" class="rounded-2xl shadow-2xl">
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="profile-badge">
+            <i class="fas fa-map-marker-alt text-blue-600"></i>
+            <div>
+                <p class="text-xs font-bold text-gray-500">BASED IN</p>
+                <p class="font-black text-gray-900">St. Clair Shores, MI</p>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
 
         <div class="scroll-indicator">
@@ -162,6 +209,153 @@
                         <p>Innovating processes</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="section-badge">METHODOLOGY</span>
+                <h2 class="section-title">The Gallant Approach</h2>
+                <p class="section-subtitle">From analysis to execution, a proven path to growth.</p>
+            </div>
+
+            <div class="process-container reveal delay-100">
+                <div class="process-line"></div>
+
+                <!-- Step 1 -->
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Audit & Analyze</h3>
+                        <p>Deep dive into current operations, identifying bottlenecks and missed opportunities.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chess-board"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Strategy Design</h3>
+                        <p>Crafting a tailored roadmap that aligns AI tools with human talent.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>AI Integration</h3>
+                        <p>Deploying smart agents and automation to handle repetitive tasks.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Team Training</h3>
+                        <p>Empowering staff to leverage new tech for higher closing rates.</p>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3>Revenue Growth</h3>
+                        <p>Monitoring results and optimizing for sustained profitability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Stats Section -->
+    <section id="impact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+        </div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="stat-item reveal">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
+                        <span class="counter" data-target="15">0</span>+
+                    </div>
+                    <p class="text-gray-400 font-medium">Years Experience</p>
+                </div>
+                <div class="stat-item reveal delay-100">
+                    <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
+                        $<span class="counter" data-target="100">0</span>M+
+                    </div>
+                    <p class="text-gray-400 font-medium">Revenue Generated</p>
+                </div>
+                <div class="stat-item reveal delay-200">
+                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
+                        <span class="counter" data-target="3000">0</span>+
+                    </div>
+                    <p class="text-gray-400 font-medium">Monthly Leads</p>
+                </div>
+                <div class="stat-item reveal delay-300">
+                    <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
+                        <span class="counter" data-target="100">0</span>%
+                    </div>
+                    <p class="text-gray-400 font-medium">Profit Increases</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Marquee -->
+    <section id="tech-stack" class="py-12 bg-slate-900 border-t border-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
+            <p class="text-sm font-semibold text-blue-500 tracking-wider uppercase">Technologies & Tools</p>
+        </div>
+
+        <div class="marquee-container">
+            <div class="marquee-content">
+                <!-- Automotive Tools -->
+                <div class="tech-pill">CDK Global</div>
+                <div class="tech-pill">Reynolds & Reynolds</div>
+                <div class="tech-pill">DealerSocket</div>
+                <div class="tech-pill">vAuto</div>
+                <div class="tech-pill">VinSolutions</div>
+                <div class="tech-pill">Elead</div>
+                <div class="tech-pill">Dealertrack</div>
+
+                <!-- AI & Tech -->
+                <div class="tech-pill highlight">OpenAI API</div>
+                <div class="tech-pill highlight">Anthropic Claude</div>
+                <div class="tech-pill highlight">Python</div>
+                <div class="tech-pill highlight">Cursor AI</div>
+                <div class="tech-pill highlight">Midjourney</div>
+                <div class="tech-pill highlight">Zapier</div>
+
+                <!-- Duplicate for smooth loop -->
+                <div class="tech-pill">CDK Global</div>
+                <div class="tech-pill">Reynolds & Reynolds</div>
+                <div class="tech-pill">DealerSocket</div>
+                <div class="tech-pill">vAuto</div>
+                <div class="tech-pill">VinSolutions</div>
+                <div class="tech-pill">Elead</div>
+                <div class="tech-pill">Dealertrack</div>
+                <div class="tech-pill highlight">OpenAI API</div>
+                <div class="tech-pill highlight">Anthropic Claude</div>
+                <div class="tech-pill highlight">Python</div>
+                <div class="tech-pill highlight">Cursor AI</div>
+                <div class="tech-pill highlight">Midjourney</div>
+                <div class="tech-pill highlight">Zapier</div>
             </div>
         </div>
     </section>
@@ -617,6 +811,15 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Increased F&I profits by 100% through process overhaul and strategic training.</p>
+                    </div>
+                </div>
                 <h4>Key Responsibilities</h4>
                 <ul>
                     <li>Desk and close deals as Selling Manager; lead turnovers, coach sales team, and oversee BDC/lead
@@ -644,6 +847,16 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Successfully launched AI integration strategies for multiple dealerships, automating
+                            repetitive tasks.</p>
+                    </div>
+                </div>
                 <h4>Key Responsibilities</h4>
                 <ul>
                     <li><strong>Strategic Consulting:</strong> Lead consulting projects to help car dealerships
@@ -673,6 +886,15 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Drove a 20% increase in Mopar Aftermarket product sales across Michigan dealerships.</p>
+                    </div>
+                </div>
                 <h4>Key Responsibilities</h4>
                 <ul>
                     <li>Executed specialized plans for individual Michigan Stellantis dealerships resulting in a 20%
@@ -700,6 +922,15 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Established a Centralized BDC managing 3,000+ monthly leads across 4 locations.</p>
+                    </div>
+                </div>
                 <h4>Key Responsibilities</h4>
                 <ul>
                     <li><strong>BDC Leadership:</strong> Spearheaded establishment of Centralized Business Development
@@ -730,6 +961,16 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Surpassed projected metrics for used car sales through strategic planning and team
+                            leadership.</p>
+                    </div>
+                </div>
                 <h4>Key Responsibilities</h4>
                 <ul>
                     <li>Led development and implementation of strategic plans for used car sales, surpassing projected
@@ -761,6 +1002,15 @@
                 <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
             </div>
             <div class="modal-body">
+                <div class="achievement-card mb-6">
+                    <div class="achievement-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h4>Key Achievement</h4>
+                        <p>Achieved a 100% increase in F&I profits through comprehensive process overhaul.</p>
+                    </div>
+                </div>
                 <h4>Sales Manager (Aug 2012 - Dec 2014)</h4>
                 <ul class="mb-6">
                     <li>Implemented forecasting strategy for vehicle sales, achieving consistent growth in monthly

@@ -94,3 +94,117 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Theme Toggle Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+    const htmlElement = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+    const iconMobile = themeToggleMobile.querySelector('i');
+
+    // Check for saved user preference, if any, on load of the website
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme) {
+        htmlElement.setAttribute('data-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            iconMobile.classList.remove('fa-moon');
+            iconMobile.classList.add('fa-sun');
+        }
+    }
+
+    function switchTheme() {
+        if (htmlElement.getAttribute('data-theme') === 'dark') {
+            htmlElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+            iconMobile.classList.remove('fa-sun');
+            iconMobile.classList.add('fa-moon');
+        } else {
+            htmlElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+            iconMobile.classList.remove('fa-moon');
+            iconMobile.classList.add('fa-sun');
+        }
+    }
+
+    themeToggle.addEventListener('click', switchTheme);
+    themeToggleMobile.addEventListener('click', switchTheme);
+
+    // Process Section Animation
+    const processSection = document.querySelector('.process-container');
+    if (processSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    processSection.classList.add('active');
+                }
+            });
+        }, { threshold: 0.2 });
+        observer.observe(processSection);
+    }
+
+    // Hero Parallax Effect
+    const heroVisual = document.getElementById('hero-visual');
+    const heroContainer = document.querySelector('.hero-3d-container');
+
+    if (heroVisual && heroContainer) {
+        heroVisual.addEventListener('mousemove', (e) => {
+            const rect = heroVisual.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg rotation
+            const rotateY = ((x - centerX) / centerX) * 10;
+
+            heroContainer.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        heroVisual.addEventListener('mouseleave', () => {
+            heroContainer.style.transform = 'rotateX(0) rotateY(0)';
+        });
+    }
+
+    // Animated Counters
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Trigger counters when in view
+    const impactSection = document.getElementById('impact');
+    if (impactSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(impactSection);
+    }
+});
