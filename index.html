@@ -51,47 +51,76 @@
                     <a href="#contact" class="btn-secondary">Get in Touch</a>
 
                     <!-- Theme Toggle -->
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="#philosophy"
+                            class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Philosophy</a>
+                        <a href="#experience"
+                            class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Experience</a>
+                        <a href="#skills"
+                            class="text-gray-600 hover:text-blue-600 transition-colors font-medium">Skills</a>
+                        <div class="flex items-center space-x-4 ml-4 border-l pl-6 border-gray-200">
+                            <a href="tel:+15862600937"
+                                class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                                <i class="fas fa-phone-alt"></i>
+                                <span class="hidden lg:inline">Call</span>
+                            </a>
+                            <a href="sms:+15862600937"
+                                class="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-colors font-medium">
+                                <i class="fas fa-comment-alt"></i>
+                                <span class="hidden lg:inline">Text</span>
+                            </a>
+                        </div>
+                        <a href="#contact" class="btn-primary text-sm px-6 py-2.5">Contact Me</a>
+                        <button id="theme-toggle"
+                            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                            aria-label="Toggle Dark Mode">
+                            <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+                        </button>
+                    </div>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle Dark Mode">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button class="mobile-menu-btn">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden flex items-center gap-4">
+                        <a href="tel:+15862600937" class="text-gray-600 hover:text-blue-600">
+                            <i class="fas fa-phone-alt text-lg"></i>
+                        </a>
+                        <button id="theme-toggle-mobile"
+                            class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                            <i class="fas fa-moon text-gray-600 dark:text-gray-300"></i>
+                        </button>
+                        <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t shadow-2xl">
-                <a href="#about" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">About</a>
-                <a href="#experience" onclick="toggleMobileMenu()"
-                    class="block px-6 py-4 hover:bg-blue-50">Experience</a>
-                <a href="#skills" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">Expertise</a>
-                <a href="#contact" onclick="toggleMobileMenu()"
-                    class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
-            </div>
+                <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t shadow-2xl">
+                    <a href="#about" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">About</a>
+                    <a href="#experience" onclick="toggleMobileMenu()"
+                        class="block px-6 py-4 hover:bg-blue-50">Experience</a>
+                    <a href="#skills" onclick="toggleMobileMenu()"
+                        class="block px-6 py-4 hover:bg-blue-50">Expertise</a>
+                    <a href="#contact" onclick="toggleMobileMenu()"
+                        class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
+                </div>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
-        <div class="hero-gradient"></div>
-        <div class="hero-particles"></div>
-
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+        </div>
         <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-                <div class="hero-content space-y-8">
-                    <div class="inline-block animate-fade-in">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="hero-content">
+                    <div class="inline-block mb-6 animate-slide-up">
                         <!-- Availability Dashboard -->
-                        <div class="availability-dashboard">
+                        <div class="availability-dashboard glass-panel">
                             <div class="dashboard-header">
-                                <span class="pulse-dot"></span>
-                                <span class="dashboard-title">Current Status</span>
+                                <span class="pulse-indicator"></span>
+                                <span class="dashboard-title">Current Availability</span>
                             </div>
-                            <div class="dashboard-grid">
+                            <div class="status-grid">
                                 <div class="status-item">
                                     <span class="status-dot available"></span>
                                     <span class="status-label">Consulting</span>
@@ -117,9 +146,10 @@
                         Bridging the gap between traditional dealership operations and the AI-driven future.
                     </p>
                     <div class="flex flex-wrap gap-4 animate-slide-up delay-200">
-                        <a href="#contact" class="btn-primary">
-                            Start the Transformation
-                            <i class="fas fa-arrow-right ml-2"></i>
+                        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0d-4j9v3y8x5z7c6b2n0m1l4k5j6h7g8f9d0s"
+                            target="_blank" class="btn-primary">
+                            Book Strategy Call
+                            <i class="fas fa-calendar-alt ml-2"></i>
                         </a>
                         <a href="#experience" class="btn-secondary">View Track Record</a>
                     </div>
@@ -143,8 +173,7 @@
                             </div>
                         </div>
                         <div class="hero-main-image">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzNPwDipnVkFsVeIuuBWL3dQrycf_7cvmKgqtYaKS-n_cp7RSz=s500-c-rp-mo-br100"
-                                alt="Joe Gallant" class="rounded-2xl shadow-2xl">
+                            <img src="joe-gallant.jpg" alt="Joe Gallant" class="rounded-2xl shadow-2xl">
                         </div>
                     </div>
                 </div>
@@ -165,908 +194,946 @@
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
-    </header>
+        </header>
 
-    <!-- Philosophy Section -->
-    <section class="relative py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden">
-        <div class="pattern-dots"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <div class="section-label">
-                        <span class="label-line"></span>
-                        <span>PHILOSOPHY</span>
-                    </div>
-                    <h2 class="text-5xl md:text-6xl font-serif font-black mb-8">More Than Just a Resume</h2>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
-                        I don't just manage dealerships; I modernize them. My approach combines integrity with
-                        adaptability.
-                        Efficient processes create happier employees, and happier employees create loyal customers.
-                    </p>
-                    <blockquote class="quote-card">
-                        "I approach every challenge with a 'how can we solve this better' mindset."
-                    </blockquote>
-                </div>
-                <div class="grid grid-cols-2 gap-6 reveal delay-200">
-                    <div class="value-card">
-                        <i class="fas fa-brain value-icon"></i>
-                        <h3>Analytical</h3>
-                        <p>Data-driven decisions</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-rocket value-icon"></i>
-                        <h3>Solution-Oriented</h3>
-                        <p>Bottlenecks to breakthroughs</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-handshake value-icon"></i>
-                        <h3>Integrity</h3>
-                        <p>Trust that lasts</p>
-                    </div>
-                    <div class="value-card">
-                        <i class="fas fa-lightbulb value-icon"></i>
-                        <h3>Creative</h3>
-                        <p>Innovating processes</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section id="process" class="py-24 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-20 reveal">
-                <span class="section-badge">METHODOLOGY</span>
-                <h2 class="section-title">The Gallant Approach</h2>
-                <p class="section-subtitle">From analysis to execution, a proven path to growth.</p>
-            </div>
-
-            <div class="process-container reveal delay-100">
-                <div class="process-line"></div>
-
-                <!-- Step 1 -->
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <div class="step-content">
-                        <h3>Audit & Analyze</h3>
-                        <p>Deep dive into current operations, identifying bottlenecks and missed opportunities.</p>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-chess-board"></i>
-                    </div>
-                    <div class="step-content">
-                        <h3>Strategy Design</h3>
-                        <p>Crafting a tailored roadmap that aligns AI tools with human talent.</p>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <div class="step-content">
-                        <h3>AI Integration</h3>
-                        <p>Deploying smart agents and automation to handle repetitive tasks.</p>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-users-cog"></i>
-                    </div>
-                    <div class="step-content">
-                        <h3>Team Training</h3>
-                        <p>Empowering staff to leverage new tech for higher closing rates.</p>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="step-content">
-                        <h3>Revenue Growth</h3>
-                        <p>Monitoring results and optimizing for sustained profitability.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Stats Section -->
-    <section id="impact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
-        </div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="stat-item reveal">
-                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
-                        <span class="counter" data-target="15">0</span>+
-                    </div>
-                    <p class="text-gray-400 font-medium">Years Experience</p>
-                </div>
-                <div class="stat-item reveal delay-100">
-                    <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
-                        $<span class="counter" data-target="100">0</span>M+
-                    </div>
-                    <p class="text-gray-400 font-medium">Revenue Generated</p>
-                </div>
-                <div class="stat-item reveal delay-200">
-                    <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
-                        <span class="counter" data-target="3000">0</span>+
-                    </div>
-                    <p class="text-gray-400 font-medium">Monthly Leads</p>
-                </div>
-                <div class="stat-item reveal delay-300">
-                    <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
-                        <span class="counter" data-target="100">0</span>%
-                    </div>
-                    <p class="text-gray-400 font-medium">Profit Increases</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tech Stack Marquee -->
-    <section id="tech-stack" class="py-12 bg-slate-900 border-t border-slate-800 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
-            <p class="text-sm font-semibold text-blue-500 tracking-wider uppercase">Technologies & Tools</p>
-        </div>
-
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <!-- Automotive Tools -->
-                <div class="tech-pill">CDK Global</div>
-                <div class="tech-pill">Reynolds & Reynolds</div>
-                <div class="tech-pill">DealerSocket</div>
-                <div class="tech-pill">vAuto</div>
-                <div class="tech-pill">VinSolutions</div>
-                <div class="tech-pill">Elead</div>
-                <div class="tech-pill">Dealertrack</div>
-
-                <!-- AI & Tech -->
-                <div class="tech-pill highlight">OpenAI API</div>
-                <div class="tech-pill highlight">Anthropic Claude</div>
-                <div class="tech-pill highlight">Python</div>
-                <div class="tech-pill highlight">Cursor AI</div>
-                <div class="tech-pill highlight">Midjourney</div>
-                <div class="tech-pill highlight">Zapier</div>
-
-                <!-- Duplicate for smooth loop -->
-                <div class="tech-pill">CDK Global</div>
-                <div class="tech-pill">Reynolds & Reynolds</div>
-                <div class="tech-pill">DealerSocket</div>
-                <div class="tech-pill">vAuto</div>
-                <div class="tech-pill">VinSolutions</div>
-                <div class="tech-pill">Elead</div>
-                <div class="tech-pill">Dealertrack</div>
-                <div class="tech-pill highlight">OpenAI API</div>
-                <div class="tech-pill highlight">Anthropic Claude</div>
-                <div class="tech-pill highlight">Python</div>
-                <div class="tech-pill highlight">Cursor AI</div>
-                <div class="tech-pill highlight">Midjourney</div>
-                <div class="tech-pill highlight">Zapier</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-24">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <span class="section-badge">CAPABILITIES</span>
-                <h2 class="section-title">My Expertise</h2>
-                <p class="section-subtitle">Click categories to explore my skillset</p>
-            </div>
-
-            <div class="skill-tabs-container reveal delay-100">
-                <div class="skill-tabs">
-                    <button onclick="openTab(event, 'Strategy')" class="skill-tab active-tab">
-                        <i class="fas fa-chess-knight"></i>Strategy & Ops
-                    </button>
-                    <button onclick="openTab(event, 'Tech')" class="skill-tab">
-                        <i class="fas fa-microchip"></i>Tech & AI
-                    </button>
-                    <button onclick="openTab(event, 'Finance')" class="skill-tab">
-                        <i class="fas fa-chart-pie"></i>Finance & Sales
-                    </button>
-                    <button onclick="openTab(event, 'Leadership')" class="skill-tab">
-                        <i class="fas fa-users"></i>Leadership
-                    </button>
-                </div>
-
-                <div class="skill-content">
-                    <div id="Strategy" class="tab-pane active">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h3 class="tab-title">Operational Excellence</h3>
-                                <p class="tab-description">Deep experience restructuring broken processes to maximize
-                                    efficiency. Big picture thinking with crucial detail management.</p>
-                            </div>
-                            <div class="skill-pills">
-                                <span class="skill-pill blue">Process Optimization</span>
-                                <span class="skill-pill blue">Inventory Management</span>
-                                <span class="skill-pill blue">Forecasting Models</span>
-                                <span class="skill-pill blue">Territory Management</span>
-                                <span class="skill-pill blue">Vendor Relations</span>
-                                <span class="skill-pill blue">Reconditioning Logistics</span>
-                            </div>
+        <!-- Philosophy Section -->
+        <section
+            class="relative py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden">
+            <div class="pattern-dots"></div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-2 gap-16 items-center">
+                    <div class="reveal">
+                        <div class="section-label">
+                            <span class="label-line"></span>
+                            <span>PHILOSOPHY</span>
                         </div>
-                    </div>
-
-                    <div id="Tech" class="tab-pane">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h3 class="tab-title">Technology & Innovation</h3>
-                                <p class="tab-description">Bridging legacy automotive systems and modern digital tools.
-                                    Expert in deploying AI to automate mundane tasks.</p>
-                            </div>
-                            <div class="skill-pills">
-                                <span class="skill-pill purple">AI Integration</span>
-                                <span class="skill-pill purple">CRM Architecture</span>
-                                <span class="skill-pill purple">SaaS Implementation</span>
-                                <span class="skill-pill purple">SEO / SEM</span>
-                                <span class="skill-pill purple">Digital Marketing</span>
-                                <span class="skill-pill purple">Workflow Automation</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="Finance" class="tab-pane">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h3 class="tab-title">Finance & Revenue</h3>
-                                <p class="tab-description">Proven track record increasing PVR and net profit through
-                                    strict compliance, menu selling, and smart deal structuring.</p>
-                            </div>
-                            <div class="skill-pills">
-                                <span class="skill-pill green">Subprime Lending</span>
-                                <span class="skill-pill green">F&I Compliance</span>
-                                <span class="skill-pill green">Reinsurance Structures</span>
-                                <span class="skill-pill green">P&L Analysis</span>
-                                <span class="skill-pill green">Deal Desking</span>
-                                <span class="skill-pill green">Revenue Optimization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="Leadership" class="tab-pane">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h3 class="tab-title">Leadership & People</h3>
-                                <p class="tab-description">Building high-performance cultures through mentorship,
-                                    accountability, and clear communication. Leading from the front.</p>
-                            </div>
-                            <div class="skill-pills">
-                                <span class="skill-pill orange">Team Building</span>
-                                <span class="skill-pill orange">Sales Coaching</span>
-                                <span class="skill-pill orange">Change Management</span>
-                                <span class="skill-pill orange">Hiring & Recruitment</span>
-                                <span class="skill-pill orange">Performance Monitoring</span>
-                                <span class="skill-pill orange">Conflict Resolution</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section id="experience" class="py-24 bg-white relative">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
-            <div class="text-center mb-16 reveal">
-                <span class="section-badge">CAREER HISTORY</span>
-                <h2 class="section-title">Career Timeline</h2>
-                <p class="section-subtitle">From high-volume retail management to strategic consulting</p>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item reveal" onclick="openModal('modal-mission')">
-                    <div class="timeline-dot current"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Mission Ford of Dearborn</h3>
-                            <span class="badge-current">Current</span>
-                        </div>
-                        <p class="timeline-role">Assistant Used Car / F&I Manager</p>
-                        <p class="timeline-desc">Strategic oversight of desk deals, F&I optimization, and inventory
-                            logistics.</p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal" onclick="openModal('modal-tech')">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Tech-Savvy Auto</h3>
-                            <span class="timeline-date">2023 - 2024</span>
-                        </div>
-                        <p class="timeline-role">Owner & Principal Consultant</p>
-                        <p class="timeline-desc">Modernizing dealerships via AI, SaaS implementation, and CRM workflow
-                            audits.</p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal" onclick="openModal('modal-mopar')">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Mopar Vehicle Protection</h3>
-                            <span class="timeline-date">2020 - 2023</span>
-                        </div>
-                        <p class="timeline-role">F&I Development Manager</p>
-                        <p class="timeline-desc">Achieved 20% sales increase across Michigan territory through
-                            data-driven coaching.</p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal" onclick="openModal('modal-elder')">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Elder Automotive Group</h3>
-                            <span class="timeline-date">2016 - 2020</span>
-                        </div>
-                        <p class="timeline-role">BDC & Marketing Director</p>
-                        <p class="timeline-desc">Managed centralized BDC for 4 locations with 3,000+ monthly leads.</p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
-                    </div>
-                </div>
-
-                <div class="timeline-item reveal" onclick="openModal('modal-north')">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>North Brothers Ford</h3>
-                            <span class="timeline-date">2015 - 2016</span>
-                        </div>
-                        <p class="timeline-role">Used Car Sales Manager</p>
-                        <p class="timeline-desc">Executed strategic plans for used car sales and inventory acquisition.
+                        <h2 class="text-5xl md:text-6xl font-serif font-black mb-8">More Than Just a Resume</h2>
+                        <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                            I don't just manage dealerships; I modernize them. My approach combines integrity with
+                            adaptability.
+                            Efficient processes create happier employees, and happier employees create loyal customers.
                         </p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        <blockquote class="quote-card">
+                            "I approach every challenge with a 'how can we solve this better' mindset."
+                        </blockquote>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 reveal delay-200">
+                        <div class="value-card">
+                            <i class="fas fa-brain value-icon"></i>
+                            <h3>Analytical</h3>
+                            <p>Data-driven decisions</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-rocket value-icon"></i>
+                            <h3>Solution-Oriented</h3>
+                            <p>Bottlenecks to breakthroughs</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-handshake value-icon"></i>
+                            <h3>Integrity</h3>
+                            <p>Trust that lasts</p>
+                        </div>
+                        <div class="value-card">
+                            <i class="fas fa-lightbulb value-icon"></i>
+                            <h3>Creative</h3>
+                            <p>Innovating processes</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="timeline-item reveal" onclick="openModal('modal-serra')">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <h3>Serra Honda Grandville</h3>
-                            <span class="timeline-date">2007 - 2014</span>
+        <!-- Process Section -->
+        <section id="process" class="py-24 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-20 reveal">
+                    <span class="section-badge">METHODOLOGY</span>
+                    <h2 class="section-title">The Gallant Approach</h2>
+                    <p class="section-subtitle">From analysis to execution, a proven path to growth.</p>
+                </div>
+
+                <div class="process-container reveal delay-100">
+                    <div class="process-line"></div>
+
+                    <!-- Step 1 -->
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-search"></i>
                         </div>
-                        <p class="timeline-role">Sales & F&I Manager</p>
-                        <p class="timeline-desc">Rapid promotion. Increased F&I profits by 100% through process
-                            overhaul.</p>
-                        <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        <div class="step-content">
+                            <h3>Audit & Analyze</h3>
+                            <p>Deep dive into current operations, identifying bottlenecks and missed opportunities.</p>
+                        </div>
                     </div>
+
+                    <!-- Step 2 -->
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-chess-board"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Strategy Design</h3>
+                            <p>Crafting a tailored roadmap that aligns AI tools with human talent.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>AI Integration</h3>
+                            <p>Deploying smart agents and automation to handle repetitive tasks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Team Training</h3>
+                            <p>Empowering staff to leverage new tech for higher closing rates.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3>Revenue Growth</h3>
+                            <p>Monitoring results and optimizing for sustained profitability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats Section -->
+        <section id="impact" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+            </div>
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="stat-item reveal">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
+                            <span class="counter" data-target="15">0</span>+
+                        </div>
+                        <p class="text-gray-400 font-medium">Years Experience</p>
+                    </div>
+                    <div class="stat-item reveal delay-100">
+                        <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
+                            $<span class="counter" data-target="100">0</span>M+
+                        </div>
+                        <p class="text-gray-400 font-medium">Revenue Generated</p>
+                    </div>
+                    <div class="stat-item reveal delay-200">
+                        <div class="text-4xl md:text-5xl font-bold text-blue-500 mb-2">
+                            <span class="counter" data-target="3000">0</span>+
+                        </div>
+                        <p class="text-gray-400 font-medium">Monthly Leads</p>
+                    </div>
+                    <div class="stat-item reveal delay-300">
+                        <div class="text-4xl md:text-5xl font-bold text-indigo-500 mb-2">
+                            <span class="counter" data-target="100">0</span>%
+                        </div>
+                        <p class="text-gray-400 font-medium">Profit Increases</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Marquee -->
+        <section id="tech-stack" class="py-12 bg-slate-900 border-t border-slate-800 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 mb-8 text-center">
+                <p class="text-sm font-semibold text-blue-500 tracking-wider uppercase">Technologies & Tools</p>
+            </div>
+
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    <!-- Automotive Tools -->
+                    <div class="tech-pill">CDK Global</div>
+                    <div class="tech-pill">Reynolds & Reynolds</div>
+                    <div class="tech-pill">DealerSocket</div>
+                    <div class="tech-pill">vAuto</div>
+                    <div class="tech-pill">VinSolutions</div>
+                    <div class="tech-pill">Elead</div>
+                    <div class="tech-pill">Dealertrack</div>
+
+                    <!-- AI & Tech -->
+                    <div class="tech-pill highlight">OpenAI API</div>
+                    <div class="tech-pill highlight">Anthropic Claude</div>
+                    <div class="tech-pill highlight">Python</div>
+                    <div class="tech-pill highlight">Cursor AI</div>
+                    <div class="tech-pill highlight">Midjourney</div>
+                    <div class="tech-pill highlight">Zapier</div>
+
+                    <!-- Duplicate for smooth loop -->
+                    <div class="tech-pill">CDK Global</div>
+                    <div class="tech-pill">Reynolds & Reynolds</div>
+                    <div class="tech-pill">DealerSocket</div>
+                    <div class="tech-pill">vAuto</div>
+                    <div class="tech-pill">VinSolutions</div>
+                    <div class="tech-pill">Elead</div>
+                    <div class="tech-pill">Dealertrack</div>
+                    <div class="tech-pill highlight">OpenAI API</div>
+                    <div class="tech-pill highlight">Anthropic Claude</div>
+                    <div class="tech-pill highlight">Python</div>
+                    <div class="tech-pill highlight">Cursor AI</div>
+                    <div class="tech-pill highlight">Midjourney</div>
+                    <div class="tech-pill highlight">Zapier</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="section-badge">CAPABILITIES</span>
+                    <h2 class="section-title">My Expertise</h2>
+                    <p class="section-subtitle">Click categories to explore my skillset</p>
+                </div>
+
+                <div class="skill-tabs-container reveal delay-100">
+                    <div class="skill-tabs">
+                        <button onclick="openTab(event, 'Strategy')" class="skill-tab active-tab">
+                            <i class="fas fa-chess-knight"></i>Strategy & Ops
+                        </button>
+                        <button onclick="openTab(event, 'Tech')" class="skill-tab">
+                            <i class="fas fa-microchip"></i>Tech & AI
+                        </button>
+                        <button onclick="openTab(event, 'Finance')" class="skill-tab">
+                            <i class="fas fa-chart-pie"></i>Finance & Sales
+                        </button>
+                        <button onclick="openTab(event, 'Leadership')" class="skill-tab">
+                            <i class="fas fa-users"></i>Leadership
+                        </button>
+                    </div>
+
+                    <div class="skill-content">
+                        <div id="Strategy" class="tab-pane active">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 class="tab-title">Operational Excellence</h3>
+                                    <p class="tab-description">Deep experience restructuring broken processes to
+                                        maximize
+                                        efficiency. Big picture thinking with crucial detail management.</p>
+                                </div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill blue">Process Optimization</span>
+                                    <span class="skill-pill blue">Inventory Management</span>
+                                    <span class="skill-pill blue">Forecasting Models</span>
+                                    <span class="skill-pill blue">Territory Management</span>
+                                    <span class="skill-pill blue">Vendor Relations</span>
+                                    <span class="skill-pill blue">Reconditioning Logistics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Tech" class="tab-pane">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 class="tab-title">Technology & Innovation</h3>
+                                    <p class="tab-description">Bridging legacy automotive systems and modern digital
+                                        tools.
+                                        Expert in deploying AI to automate mundane tasks.</p>
+                                </div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill purple">AI Integration</span>
+                                    <span class="skill-pill purple">CRM Architecture</span>
+                                    <span class="skill-pill purple">SaaS Implementation</span>
+                                    <span class="skill-pill purple">SEO / SEM</span>
+                                    <span class="skill-pill purple">Digital Marketing</span>
+                                    <span class="skill-pill purple">Workflow Automation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Finance" class="tab-pane">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 class="tab-title">Finance & Revenue</h3>
+                                    <p class="tab-description">Proven track record increasing PVR and net profit through
+                                        strict compliance, menu selling, and smart deal structuring.</p>
+                                </div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill green">Subprime Lending</span>
+                                    <span class="skill-pill green">F&I Compliance</span>
+                                    <span class="skill-pill green">Reinsurance Structures</span>
+                                    <span class="skill-pill green">P&L Analysis</span>
+                                    <span class="skill-pill green">Deal Desking</span>
+                                    <span class="skill-pill green">Revenue Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="Leadership" class="tab-pane">
+                            <div class="grid md:grid-cols-2 gap-8 items-center">
+                                <div>
+                                    <h3 class="tab-title">Leadership & People</h3>
+                                    <p class="tab-description">Building high-performance cultures through mentorship,
+                                        accountability, and clear communication. Leading from the front.</p>
+                                </div>
+                                <div class="skill-pills">
+                                    <span class="skill-pill orange">Team Building</span>
+                                    <span class="skill-pill orange">Sales Coaching</span>
+                                    <span class="skill-pill orange">Change Management</span>
+                                    <span class="skill-pill orange">Hiring & Recruitment</span>
+                                    <span class="skill-pill orange">Performance Monitoring</span>
+                                    <span class="skill-pill orange">Conflict Resolution</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="py-24 bg-white relative">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16 reveal">
+                    <span class="section-badge">CAREER HISTORY</span>
+                    <h2 class="section-title">Career Timeline</h2>
+                    <p class="section-subtitle">From high-volume retail management to strategic consulting</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item reveal" onclick="openModal('modal-mission')">
+                        <div class="timeline-dot current"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>Mission Ford of Dearborn</h3>
+                                <span class="badge-current">Current</span>
+                            </div>
+                            <p class="timeline-role">Assistant Used Car / F&I Manager</p>
+                            <p class="timeline-desc">Strategic oversight of desk deals, F&I optimization, and inventory
+                                logistics.</p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal" onclick="openModal('modal-tech')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>Tech-Savvy Auto</h3>
+                                <span class="timeline-date">2023 - 2024</span>
+                            </div>
+                            <p class="timeline-role">Owner & Principal Consultant</p>
+                            <p class="timeline-desc">Modernizing dealerships via AI, SaaS implementation, and CRM
+                                workflow
+                                audits.</p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal" onclick="openModal('modal-mopar')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>Mopar Vehicle Protection</h3>
+                                <span class="timeline-date">2020 - 2023</span>
+                            </div>
+                            <p class="timeline-role">F&I Development Manager</p>
+                            <p class="timeline-desc">Achieved 20% sales increase across Michigan territory through
+                                data-driven coaching.</p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal" onclick="openModal('modal-elder')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>Elder Automotive Group</h3>
+                                <span class="timeline-date">2016 - 2020</span>
+                            </div>
+                            <p class="timeline-role">BDC & Marketing Director</p>
+                            <p class="timeline-desc">Managed centralized BDC for 4 locations with 3,000+ monthly leads.
+                            </p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal" onclick="openModal('modal-north')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>North Brothers Ford</h3>
+                                <span class="timeline-date">2015 - 2016</span>
+                            </div>
+                            <p class="timeline-role">Used Car Sales Manager</p>
+                            <p class="timeline-desc">Executed strategic plans for used car sales and inventory
+                                acquisition.
+                            </p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item reveal" onclick="openModal('modal-serra')">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-header">
+                                <h3>Serra Honda Grandville</h3>
+                                <span class="timeline-date">2007 - 2014</span>
+                            </div>
+                            <p class="timeline-role">Sales & F&I Manager</p>
+                            <p class="timeline-desc">Rapid promotion. Increased F&I profits by 100% through process
+                                overhaul.</p>
+                            <span class="timeline-cta">View Details <i class="fas fa-arrow-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-24 bg-slate-50 relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 reveal">
+                    <span class="section-badge">TESTIMONIALS</span>
+                    <h2 class="section-title">Client Success Stories</h2>
+                    <p class="section-subtitle">Real feedback from real customers</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal delay-100">
+                    <!-- Review 1: Damion Yurgelaitis -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzNPwDipnVkFsVeIuuBWL3dQrycf_7cvmKgqtYaKS-n_cp7RSz=s64-c-rp-mo-br100"
+                                    alt="Damion Yurgelaitis" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Damion Yurgelaitis</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Both Joe Gallant and Jose Cadena provided an outstanding experience... From the start, they
+                            welcomed me warmly and answered every question with thoroughness and professionalism. Beyond
+                            making me feel like a valued customer, they created a comfortable and friendly atmosphere...
+                            Joe
+                            and Jose showed patience and went above and beyond."
+                        </p>
+                    </div>
+
+                    <!-- Review 2: Brian Shipp -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWeDin-XSdcm5VtOs2yfjrJDGIsjvHVZZSWaWV0rhzAgKnNHBg=s64-c-rp-mo-br100"
+                                    alt="Brian Shipp" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Brian Shipp</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Joe Gallant was my car sale man. Amazing customer service went above and beyond. I reached
+                            out
+                            to him in the a.m, told him the SUV I wanted. Filled out my finance paperwork online. He
+                            reached
+                            out and immediately started the process. Very understanding of my time... I was in less than
+                            an
+                            hour filling out paperwork."
+                        </p>
+                    </div>
+
+                    <!-- Review 3: Julie Vanderhoff -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjV9qsGb6Ftync8EkbttXreCqcFC-f65_5NwbDVLznSKcVFx2fb-pQ=s64-c-rp-mo-ba2-br100"
+                                    alt="Julie Vanderhoff" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Julie Vanderhoff</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "This was the easiest car buying experience I've ever had. Joe Gallant made it painless,
+                            getting
+                            everything ready ahead of time and he was attentive to all of my questions;-) pricing was
+                            fair
+                            too!"
+                        </p>
+                    </div>
+
+                    <!-- Review 4: Jake Hansen -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocIqkDpJUc8mVolouq0ZhcAWKP_az1MYnbEe3Ao0fXrx_Kp6ew=s64-c-rp-mo-br100"
+                                    alt="Jake Hansen" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Jake Hansen</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Joe Gallant made our car-buying process a breeze. He went out of his way to make every step
+                            convenient and stress free. Would highly recommend."
+                        </p>
+                    </div>
+
+                    <!-- Review 5: Toki Nokia -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a/ACg8ocKdGM0MpOJGjUzqseuFrgr1gq6r0WbdC-gEn_Dr5B1m1UrQzRu7=s64-c-rp-mo-ba3-br100"
+                                    alt="Toki Nokia" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Toki Nokia</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Hi guys I'm a little late doing this review because I've been enjoying my new SUV. I dealt
+                            with
+                            a salesperson by the name of Joe in the used car department The level of service was top
+                            tier,
+                            Joe was very communicative he arranged a test..."
+                        </p>
+                    </div>
+
+                    <!-- Review 6: Tina Thompson -->
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar-wrapper">
+                                <img src="https://lh3.googleusercontent.com/a-/ALV-UjWlkF5X-XqR6VujNAMBrcmKaKnTZq1vmGkVWrqbAlCj2B1VqRITFA=s64-c-rp-mo-br100"
+                                    alt="Tina Thompson" class="review-avatar">
+                                <div class="review-platform">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="review-meta">
+                                <h3 class="reviewer-name">Tina Thompson</h3>
+                                <div class="star-rating">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "I recently purchased a vehicle from here. I must say Joe was great, he was upfront and
+                            about
+                            business, which I liked. I highly recommend purchasing a vehicle from here. I referred 2
+                            family
+                            members..."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Section -->
+        <section id="personal" class="py-24 relative overflow-hidden">
+            <div class="personal-bg"></div>
+
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 reveal">
+                    <span class="section-badge">PERSONAL</span>
+                    <h2 class="section-title">Life Outside Work</h2>
+                    <p class="section-subtitle">The people and passions that keep me grounded</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 reveal delay-100">
+                    <div class="personal-card">
+                        <div class="personal-icon blue">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Family First</h3>
+                        <p>Based in <strong>St. Clair Shores</strong> with my girlfriend <strong>Tara</strong> and our
+                            French bulldog, <strong>Zoe</strong>. Proud dad to <strong>Mia</strong> (10) and
+                            <strong>Dominic</strong> (7).
+                        </p>
+                    </div>
+                    <div class="personal-card">
+                        <div class="personal-icon purple">
+                            <i class="fas fa-guitar"></i>
+                        </div>
+                        <h3>Passions</h3>
+                        <p>When I'm not working, I'm diving into <strong>music</strong> or exploring the latest in
+                            <strong>AI technology</strong>. Relentless curiosity for innovation.
+                        </p>
+                    </div>
+                    <div class="personal-card">
+                        <div class="personal-icon orange">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <h3>Values</h3>
+                        <p>I value <strong>integrity, creativity, and adaptability</strong>. Leading with honesty and
+                            staying flexible when challenges arise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact"
+            class="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white relative overflow-hidden">
+            <div class="contact-pattern"></div>
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
+                <h2 class="text-5xl md:text-6xl font-black font-serif mb-8">Ready to Modernize Your Operations?</h2>
+                <p class="text-blue-100 text-xl mb-12 font-light">I'm currently open to roles in <strong
+                        class="font-bold">Client Success, District Management, or Strategic Partnerships</strong>.</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
+                    <div id="calendar-button-contact"></div>
+                    <a href="mailto:joegallant@icloud.com" class="contact-btn secondary">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <a href="Joe_Gallant.vcf" download class="contact-btn secondary">
+                        <i class="fas fa-address-card"></i> Save Contact
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <a href="https://www.linkedin.com/in/joegallant" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm border-t border-gray-800">
+            <p>&copy; 2025 Joe Gallant. St. Clair Shores, MI.</p>
+        </footer>
+
+        <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <div id="modal-overlay" class="modal-overlay" onclick="closeAllModals()"></div>
+
+        <!-- Modals -->
+        <div id="modal-mission" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>Mission Ford of Dearborn</h3>
+                        <p>Assistant Used Car Selling Manager / F&I Manager</p>
+                    </div>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Increased F&I profits by 100% through process overhaul and strategic training.</p>
+                        </div>
+                    </div>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li>Desk and close deals as Selling Manager; lead turnovers, coach sales team, and oversee
+                            BDC/lead
+                            follow-up to increase close rates, PVR, and CSI scores.</li>
+                        <li>Structure prime and subprime deals aligned to lender programs; deliver compliant menu
+                            presentations to maximize VSC, GAP, and ancillary product penetration.</li>
+                        <li>Manage funding and contracting processes including auditing paperwork, titling
+                            documentation,
+                            resolving callbacks, accelerating days-to-fund metrics.</li>
+                        <li>Source and acquire used vehicle inventory through wholesale auctions; conduct comprehensive
+                            appraisals on trade-ins and wholesale acquisitions.</li>
+                        <li>Direct vehicle reconditioning operations including setting recon plans and budgets,
+                            coordinating
+                            with service vendors; price and re-price inventory strategically.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="py-24 bg-slate-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <span class="section-badge">TESTIMONIALS</span>
-                <h2 class="section-title">Client Success Stories</h2>
-                <p class="section-subtitle">Real feedback from real customers</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 reveal delay-100">
-                <!-- Review 1: Damion Yurgelaitis -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjXzNPwDipnVkFsVeIuuBWL3dQrycf_7cvmKgqtYaKS-n_cp7RSz=s64-c-rp-mo-br100"
-                                alt="Damion Yurgelaitis" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
-                        </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Damion Yurgelaitis</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
+        <div id="modal-tech" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>Tech-Savvy Auto</h3>
+                        <p>Owner</p>
                     </div>
-                    <p class="review-text">
-                        "Both Joe Gallant and Jose Cadena provided an outstanding experience... From the start, they
-                        welcomed me warmly and answered every question with thoroughness and professionalism. Beyond
-                        making me feel like a valued customer, they created a comfortable and friendly atmosphere... Joe
-                        and Jose showed patience and went above and beyond."
-                    </p>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
                 </div>
-
-                <!-- Review 2: Brian Shipp -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWeDin-XSdcm5VtOs2yfjrJDGIsjvHVZZSWaWV0rhzAgKnNHBg=s64-c-rp-mo-br100"
-                                alt="Brian Shipp" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-rocket"></i>
                         </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Brian Shipp</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Successfully launched AI integration strategies for multiple dealerships, automating
+                                repetitive tasks.</p>
                         </div>
                     </div>
-                    <p class="review-text">
-                        "Joe Gallant was my car sale man. Amazing customer service went above and beyond. I reached out
-                        to him in the a.m, told him the SUV I wanted. Filled out my finance paperwork online. He reached
-                        out and immediately started the process. Very understanding of my time... I was in less than an
-                        hour filling out paperwork."
-                    </p>
-                </div>
-
-                <!-- Review 3: Julie Vanderhoff -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjV9qsGb6Ftync8EkbttXreCqcFC-f65_5NwbDVLznSKcVFx2fb-pQ=s64-c-rp-mo-ba2-br100"
-                                alt="Julie Vanderhoff" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
-                        </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Julie Vanderhoff</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        "This was the easiest car buying experience I've ever had. Joe Gallant made it painless, getting
-                        everything ready ahead of time and he was attentive to all of my questions;-) pricing was fair
-                        too!"
-                    </p>
-                </div>
-
-                <!-- Review 4: Jake Hansen -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a/ACg8ocIqkDpJUc8mVolouq0ZhcAWKP_az1MYnbEe3Ao0fXrx_Kp6ew=s64-c-rp-mo-br100"
-                                alt="Jake Hansen" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
-                        </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Jake Hansen</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        "Joe Gallant made our car-buying process a breeze. He went out of his way to make every step
-                        convenient and stress free. Would highly recommend."
-                    </p>
-                </div>
-
-                <!-- Review 5: Toki Nokia -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a/ACg8ocKdGM0MpOJGjUzqseuFrgr1gq6r0WbdC-gEn_Dr5B1m1UrQzRu7=s64-c-rp-mo-ba3-br100"
-                                alt="Toki Nokia" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
-                        </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Toki Nokia</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        "Hi guys I'm a little late doing this review because I've been enjoying my new SUV. I dealt with
-                        a salesperson by the name of Joe in the used car department The level of service was top tier,
-                        Joe was very communicative he arranged a test..."
-                    </p>
-                </div>
-
-                <!-- Review 6: Tina Thompson -->
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="review-avatar-wrapper">
-                            <img src="https://lh3.googleusercontent.com/a-/ALV-UjWlkF5X-XqR6VujNAMBrcmKaKnTZq1vmGkVWrqbAlCj2B1VqRITFA=s64-c-rp-mo-br100"
-                                alt="Tina Thompson" class="review-avatar">
-                            <div class="review-platform">
-                                <i class="fab fa-google"></i>
-                            </div>
-                        </div>
-                        <div class="review-meta">
-                            <h3 class="reviewer-name">Tina Thompson</h3>
-                            <div class="star-rating">
-                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                                    class="fas fa-star"></i><i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="review-text">
-                        "I recently purchased a vehicle from here. I must say Joe was great, he was upfront and about
-                        business, which I liked. I highly recommend purchasing a vehicle from here. I referred 2 family
-                        members..."
-                    </p>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li><strong>Strategic Consulting:</strong> Lead consulting projects to help car dealerships
+                            integrate technology into their operational processes.</li>
+                        <li><strong>Software Solutions Expertise:</strong> Spearhead selling, reselling, and referring
+                            specialized software services for automotive dealerships.</li>
+                        <li><strong>Training and Development:</strong> Design and deliver comprehensive training
+                            programs on
+                            various dealership software.</li>
+                        <li><strong>AI Integration:</strong> Drive adoption of AI technologies in dealership processes,
+                            overseeing integration and ensuring seamless transition.</li>
+                        <li><strong>Partnership Management:</strong> Cultivate and maintain strong relationships with
+                            software companies.</li>
+                        <li><strong>Revenue Generation:</strong> Develop strategies for various revenue streams
+                            including
+                            software reselling, vendor referrals, consulting fees.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Personal Section -->
-    <section id="personal" class="py-24 relative overflow-hidden">
-        <div class="personal-bg"></div>
-
-        <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16 reveal">
-                <span class="section-badge">PERSONAL</span>
-                <h2 class="section-title">Life Outside Work</h2>
-                <p class="section-subtitle">The people and passions that keep me grounded</p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 reveal delay-100">
-                <div class="personal-card">
-                    <div class="personal-icon blue">
-                        <i class="fas fa-home"></i>
+        <div id="modal-mopar" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>Mopar Vehicle Protection</h3>
+                        <p>F&I Development Manager, Michigan</p>
                     </div>
-                    <h3>Family First</h3>
-                    <p>Based in <strong>St. Clair Shores</strong> with my girlfriend <strong>Tara</strong> and our
-                        French bulldog, <strong>Zoe</strong>. Proud dad to <strong>Mia</strong> (10) and
-                        <strong>Dominic</strong> (7).
-                    </p>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
                 </div>
-                <div class="personal-card">
-                    <div class="personal-icon purple">
-                        <i class="fas fa-guitar"></i>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Drove a 20% increase in Mopar Aftermarket product sales across Michigan dealerships.</p>
+                        </div>
                     </div>
-                    <h3>Passions</h3>
-                    <p>When I'm not working, I'm diving into <strong>music</strong> or exploring the latest in
-                        <strong>AI technology</strong>. Relentless curiosity for innovation.
-                    </p>
-                </div>
-                <div class="personal-card">
-                    <div class="personal-icon orange">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <h3>Values</h3>
-                    <p>I value <strong>integrity, creativity, and adaptability</strong>. Leading with honesty and
-                        staying flexible when challenges arise.</p>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li>Executed specialized plans for individual Michigan Stellantis dealerships resulting in a 20%
+                            increase in Mopar Aftermarket product sales.</li>
+                        <li><strong>Revenue Optimization:</strong> Advise dealers on utilizing reinsurance and other
+                            revenue-enhancing programs.</li>
+                        <li><strong>Training and Development:</strong> Lead recruitment, training, and development of
+                            Finance Managers, Salespeople, and Sales Managers.</li>
+                        <li><strong>Data-Driven Analysis:</strong> Utilize real-time data to monitor departmental
+                            performances and offer targeted coaching.</li>
+                        <li><strong>Interdepartmental Collaboration:</strong> Work with Service departments,
+                            facilitating
+                            training in service lane sales of aftermarket products.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Contact CTA -->
-    <section id="contact"
-        class="py-24 bg-gradient-to-br from-blue-600 via-indigo-600 to-blue-700 text-white relative overflow-hidden">
-        <div class="contact-pattern"></div>
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
-            <h2 class="text-5xl md:text-6xl font-black font-serif mb-8">Ready to Modernize Your Operations?</h2>
-            <p class="text-blue-100 text-xl mb-12 font-light">I'm currently open to roles in <strong
-                    class="font-bold">Client Success, District Management, or Strategic Partnerships</strong>.</p>
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
-                <div id="calendar-button-contact"></div>
-                <a href="mailto:joegallant@icloud.com" class="contact-btn secondary">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="Joe_Gallant.vcf" download class="contact-btn secondary">
-                    <i class="fas fa-address-card"></i> Save Contact
-                </a>
-            </div>
-            <div class="flex justify-center">
-                <a href="https://www.linkedin.com/in/joegallant" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+        <div id="modal-elder" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>Elder Automotive Group</h3>
+                        <p>Business Development/Marketing Director</p>
+                    </div>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Established a Centralized BDC managing 3,000+ monthly leads across 4 locations.</p>
+                        </div>
+                    </div>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li><strong>BDC Leadership:</strong> Spearheaded establishment of Centralized Business
+                            Development
+                            Center, serving 4 locations and 5 brands. Managed 3,000+ monthly leads.</li>
+                        <li><strong>Sales Training:</strong> Delivered comprehensive sales and process training to Sales
+                            Management and Sales Teams.</li>
+                        <li><strong>Marketing Management:</strong> Oversaw all marketing initiatives, collaboratively
+                            working with advertisers and marketing companies. Managed social media and dealership
+                            websites.
+                        </li>
+                        <li><strong>Vendor Relationship Management:</strong> Primary contact for software vendors,
+                            managed
+                            CRM and software tools across Fixed and Variable departments.</li>
+                        <li><strong>Campaign Creation:</strong> Initiated targeted call and email campaigns for Sales
+                            and
+                            Service Departments.</li>
+                        <li><strong>Operational Support:</strong> Provided direct assistance at Sales and Finance desks
+                            across all locations.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm border-t border-gray-800">
-        <p>&copy; 2025 Joe Gallant. St. Clair Shores, MI.</p>
-    </footer>
-
-    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <div id="modal-overlay" class="modal-overlay" onclick="closeAllModals()"></div>
-
-    <!-- Modals -->
-    <div id="modal-mission" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>Mission Ford of Dearborn</h3>
-                    <p>Assistant Used Car Selling Manager / F&I Manager</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-trophy"></i>
+        <div id="modal-north" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>North Brothers Ford</h3>
+                        <p>Used Car Sales Manager</p>
                     </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Increased F&I profits by 100% through process overhaul and strategic training.</p>
-                    </div>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
                 </div>
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    <li>Desk and close deals as Selling Manager; lead turnovers, coach sales team, and oversee BDC/lead
-                        follow-up to increase close rates, PVR, and CSI scores.</li>
-                    <li>Structure prime and subprime deals aligned to lender programs; deliver compliant menu
-                        presentations to maximize VSC, GAP, and ancillary product penetration.</li>
-                    <li>Manage funding and contracting processes including auditing paperwork, titling documentation,
-                        resolving callbacks, accelerating days-to-fund metrics.</li>
-                    <li>Source and acquire used vehicle inventory through wholesale auctions; conduct comprehensive
-                        appraisals on trade-ins and wholesale acquisitions.</li>
-                    <li>Direct vehicle reconditioning operations including setting recon plans and budgets, coordinating
-                        with service vendors; price and re-price inventory strategically.</li>
-                </ul>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Surpassed projected metrics for used car sales through strategic planning and team
+                                leadership.</p>
+                        </div>
+                    </div>
+                    <h4>Key Responsibilities</h4>
+                    <ul>
+                        <li>Led development and implementation of strategic plans for used car sales, surpassing
+                            projected
+                            metrics.</li>
+                        <li><strong>Sales Floor Management:</strong> Led operations of used vehicle sales floor,
+                            focusing on
+                            efficient deal desking and closing.</li>
+                        <li><strong>Team Leadership:</strong> Recruited, trained, and supervised used-vehicle sales
+                            staff.
+                        </li>
+                        <li><strong>Internet Lead Expertise:</strong> Specialized in managing internet leads, employing
+                            strategies to maximize conversion.</li>
+                        <li><strong>Cross-Departmental Support:</strong> Provided support in finance office and used
+                            vehicle
+                            operations.</li>
+                        <li><strong>Marketing Collaboration:</strong> Worked closely with advertisers to develop
+                            targeted
+                            campaigns.</li>
+                        <li><strong>Vehicle Operations:</strong> Managed all aspects of appraisal, acquisition, and
+                            reconditioning of used vehicles.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="modal-tech" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>Tech-Savvy Auto</h3>
-                    <p>Owner</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-rocket"></i>
+        <div id="modal-serra" class="modal-wrapper">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h3>Serra Honda Grandville</h3>
+                        <p>Sales Manager / F&I Manager</p>
                     </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Successfully launched AI integration strategies for multiple dealerships, automating
-                            repetitive tasks.</p>
-                    </div>
+                    <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
                 </div>
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    <li><strong>Strategic Consulting:</strong> Lead consulting projects to help car dealerships
-                        integrate technology into their operational processes.</li>
-                    <li><strong>Software Solutions Expertise:</strong> Spearhead selling, reselling, and referring
-                        specialized software services for automotive dealerships.</li>
-                    <li><strong>Training and Development:</strong> Design and deliver comprehensive training programs on
-                        various dealership software.</li>
-                    <li><strong>AI Integration:</strong> Drive adoption of AI technologies in dealership processes,
-                        overseeing integration and ensuring seamless transition.</li>
-                    <li><strong>Partnership Management:</strong> Cultivate and maintain strong relationships with
-                        software companies.</li>
-                    <li><strong>Revenue Generation:</strong> Develop strategies for various revenue streams including
-                        software reselling, vendor referrals, consulting fees.</li>
-                </ul>
+                <div class="modal-body">
+                    <div class="achievement-card mb-6">
+                        <div class="achievement-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h4>Key Achievement</h4>
+                            <p>Achieved a 100% increase in F&I profits through comprehensive process overhaul.</p>
+                        </div>
+                    </div>
+                    <h4>Sales Manager (Aug 2012 - Dec 2014)</h4>
+                    <ul class="mb-6">
+                        <li>Implemented forecasting strategy for vehicle sales, achieving consistent growth in monthly
+                            targets.</li>
+                        <li><strong>Sales Floor Management:</strong> Lead new and pre-owned vehicle sales, including
+                            hiring
+                            and training of sales staff.</li>
+                        <li><strong>Training Programs:</strong> Conduct sales training programs focusing on advanced
+                            sales
+                            techniques.</li>
+                        <li><strong>Marketing Oversight:</strong> Develop and implement comprehensive marketing
+                            strategies.
+                        </li>
+                        <li><strong>Inventory Management:</strong> Developed forecasting models that led to 20%
+                            improvement
+                            in used vehicle inventory control.</li>
+                    </ul>
+
+                    <h4>F&I Manager (Sep 2010 - Aug 2012)</h4>
+                    <ul>
+                        <li><strong>Product Sales:</strong> Actively involved in selling aftermarket finance and
+                            insurance
+                            products.</li>
+                        <li>Utilized DMS data analysis to identify revenue opportunities, contributing to 10% increase
+                            in
+                            overall profitability.</li>
+                        <li>Managed financial compliance with state regulations, generating zero compliance-related
+                            penalties.</li>
+                        <li>Led comprehensive overhaul of F&I processes, resulting in notable 100% increase in F&I
+                            profits.
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="modal-mopar" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>Mopar Vehicle Protection</h3>
-                    <p>F&I Development Manager, Michigan</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Drove a 20% increase in Mopar Aftermarket product sales across Michigan dealerships.</p>
-                    </div>
-                </div>
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    <li>Executed specialized plans for individual Michigan Stellantis dealerships resulting in a 20%
-                        increase in Mopar Aftermarket product sales.</li>
-                    <li><strong>Revenue Optimization:</strong> Advise dealers on utilizing reinsurance and other
-                        revenue-enhancing programs.</li>
-                    <li><strong>Training and Development:</strong> Lead recruitment, training, and development of
-                        Finance Managers, Salespeople, and Sales Managers.</li>
-                    <li><strong>Data-Driven Analysis:</strong> Utilize real-time data to monitor departmental
-                        performances and offer targeted coaching.</li>
-                    <li><strong>Interdepartmental Collaboration:</strong> Work with Service departments, facilitating
-                        training in service lane sales of aftermarket products.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+        <!-- Google Calendar Appointment Scheduling begin -->
+        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+        <script>
+            (function () {
+                window.addEventListener('load', function () {
+                    // Hero Button
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true',
+                        color: '#2563eb',
+                        label: 'Book Interview',
+                        target: document.getElementById('calendar-button-hero'),
+                    });
 
-    <div id="modal-elder" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>Elder Automotive Group</h3>
-                    <p>Business Development/Marketing Director</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Established a Centralized BDC managing 3,000+ monthly leads across 4 locations.</p>
-                    </div>
-                </div>
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    <li><strong>BDC Leadership:</strong> Spearheaded establishment of Centralized Business Development
-                        Center, serving 4 locations and 5 brands. Managed 3,000+ monthly leads.</li>
-                    <li><strong>Sales Training:</strong> Delivered comprehensive sales and process training to Sales
-                        Management and Sales Teams.</li>
-                    <li><strong>Marketing Management:</strong> Oversaw all marketing initiatives, collaboratively
-                        working with advertisers and marketing companies. Managed social media and dealership websites.
-                    </li>
-                    <li><strong>Vendor Relationship Management:</strong> Primary contact for software vendors, managed
-                        CRM and software tools across Fixed and Variable departments.</li>
-                    <li><strong>Campaign Creation:</strong> Initiated targeted call and email campaigns for Sales and
-                        Service Departments.</li>
-                    <li><strong>Operational Support:</strong> Provided direct assistance at Sales and Finance desks
-                        across all locations.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-north" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>North Brothers Ford</h3>
-                    <p>Used Car Sales Manager</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-chart-pie"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Surpassed projected metrics for used car sales through strategic planning and team
-                            leadership.</p>
-                    </div>
-                </div>
-                <h4>Key Responsibilities</h4>
-                <ul>
-                    <li>Led development and implementation of strategic plans for used car sales, surpassing projected
-                        metrics.</li>
-                    <li><strong>Sales Floor Management:</strong> Led operations of used vehicle sales floor, focusing on
-                        efficient deal desking and closing.</li>
-                    <li><strong>Team Leadership:</strong> Recruited, trained, and supervised used-vehicle sales staff.
-                    </li>
-                    <li><strong>Internet Lead Expertise:</strong> Specialized in managing internet leads, employing
-                        strategies to maximize conversion.</li>
-                    <li><strong>Cross-Departmental Support:</strong> Provided support in finance office and used vehicle
-                        operations.</li>
-                    <li><strong>Marketing Collaboration:</strong> Worked closely with advertisers to develop targeted
-                        campaigns.</li>
-                    <li><strong>Vehicle Operations:</strong> Managed all aspects of appraisal, acquisition, and
-                        reconditioning of used vehicles.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-serra" class="modal-wrapper">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div>
-                    <h3>Serra Honda Grandville</h3>
-                    <p>Sales Manager / F&I Manager</p>
-                </div>
-                <button onclick="closeAllModals()" class="modal-close"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="modal-body">
-                <div class="achievement-card mb-6">
-                    <div class="achievement-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <div class="achievement-content">
-                        <h4>Key Achievement</h4>
-                        <p>Achieved a 100% increase in F&I profits through comprehensive process overhaul.</p>
-                    </div>
-                </div>
-                <h4>Sales Manager (Aug 2012 - Dec 2014)</h4>
-                <ul class="mb-6">
-                    <li>Implemented forecasting strategy for vehicle sales, achieving consistent growth in monthly
-                        targets.</li>
-                    <li><strong>Sales Floor Management:</strong> Lead new and pre-owned vehicle sales, including hiring
-                        and training of sales staff.</li>
-                    <li><strong>Training Programs:</strong> Conduct sales training programs focusing on advanced sales
-                        techniques.</li>
-                    <li><strong>Marketing Oversight:</strong> Develop and implement comprehensive marketing strategies.
-                    </li>
-                    <li><strong>Inventory Management:</strong> Developed forecasting models that led to 20% improvement
-                        in used vehicle inventory control.</li>
-                </ul>
-
-                <h4>F&I Manager (Sep 2010 - Aug 2012)</h4>
-                <ul>
-                    <li><strong>Product Sales:</strong> Actively involved in selling aftermarket finance and insurance
-                        products.</li>
-                    <li>Utilized DMS data analysis to identify revenue opportunities, contributing to 10% increase in
-                        overall profitability.</li>
-                    <li>Managed financial compliance with state regulations, generating zero compliance-related
-                        penalties.</li>
-                    <li>Led comprehensive overhaul of F&I processes, resulting in notable 100% increase in F&I profits.
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Google Calendar Appointment Scheduling begin -->
-    <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-    <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-    <script>
-        (function () {
-            window.addEventListener('load', function () {
-                // Hero Button
-                calendar.schedulingButton.load({
-                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true',
-                    color: '#2563eb',
-                    label: 'Book Interview',
-                    target: document.getElementById('calendar-button-hero'),
+                    // Contact Button
+                    calendar.schedulingButton.load({
+                        url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true',
+                        color: '#2563eb',
+                        label: 'Book Interview',
+                        target: document.getElementById('calendar-button-contact'),
+                    });
                 });
+            })();
+        </script>
+        <!-- end Google Calendar Appointment Scheduling -->
 
-                // Contact Button
-                calendar.schedulingButton.load({
-                    url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1_fbvhCEUwEkVHbbQEbz6OZ5s1xDJrZQpj7fZiK2L6LiLEGlw5AjE7V1Z5CrFKnrsnYZpjODLs?gv=true',
-                    color: '#2563eb',
-                    label: 'Book Interview',
-                    target: document.getElementById('calendar-button-contact'),
-                });
-            });
-        })();
-    </script>
-    <!-- end Google Calendar Appointment Scheduling -->
-
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>
