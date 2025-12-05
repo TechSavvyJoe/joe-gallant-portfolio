@@ -67,26 +67,29 @@
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center gap-4">
-                    <a href="tel:+15862600937" class="text-gray-600 hover:text-blue-600">
+                    <a href="tel:+15862600937" class="text-gray-600 hover:text-blue-600" aria-label="Call Joe Gallant" title="Call">
                         <i class="fas fa-phone-alt text-lg"></i>
                     </a>
+                    <a href="sms:+15862600937" class="text-gray-600 hover:text-blue-600" aria-label="Text Joe Gallant" title="Text">
+                        <i class="fas fa-comment-alt text-lg"></i>
+                    </a>
 
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-gray-600 hover:text-blue-600 focus:outline-none" aria-label="Toggle navigation menu" title="Menu">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
-                <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-t shadow-2xl">
-                    <a href="#about" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50">About</a>
-                    <a href="#experience" onclick="toggleMobileMenu()"
-                        class="block px-6 py-4 hover:bg-blue-50">Experience</a>
-                    <a href="#skills" onclick="toggleMobileMenu()"
-                        class="block px-6 py-4 hover:bg-blue-50">Expertise</a>
-                    <a href="#contact" onclick="toggleMobileMenu()"
-                        class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
-                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-xl border-t shadow-2xl">
+            <a href="#philosophy" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50 text-gray-700">Philosophy</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50 text-gray-700">Experience</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block px-6 py-4 hover:bg-blue-50 text-gray-700">Skills</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-6 py-4 text-blue-600 font-bold bg-blue-50">Contact</a>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -213,10 +216,10 @@
         <div class="scroll-indicator">
             <i class="fas fa-chevron-down"></i>
         </div>
-        </header>
+    </section>
 
         <!-- Philosophy Section -->
-        <section
+        <section id="philosophy"
             class="relative py-24 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white overflow-hidden">
             <div class="pattern-dots"></div>
             <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">

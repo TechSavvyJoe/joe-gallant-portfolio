@@ -59,10 +59,24 @@ body {
 /* Navigation */
 .glass-nav {
     background: var(--nav-bg);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     box-shadow: var(--card-shadow);
     transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+#mobile-menu {
+    z-index: 100;
+}
+
+#mobile-menu a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#mobile-menu a:last-child {
+    border-bottom: none;
 }
 
 .nav-link {
