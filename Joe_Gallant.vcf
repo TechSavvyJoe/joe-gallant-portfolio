@@ -3,11 +3,11 @@ VERSION:3.0
 FN:Joe Gallant
 N:Gallant;Joe;;;
 TITLE:Strategic Automotive Consultant
-TEL;TYPE=CELL:616-350-1299
+TEL;TYPE=CELL:+1-616-350-1299
 EMAIL;TYPE=INTERNET:joegallant@icloud.com
-URL:https://techsavvyjoe.github.io/joe-gallant-portfolio/
+URL:https://www.joegallant.me
 ADR;TYPE=HOME:;;;St. Clair Shores;MI;;USA
-item1.URL:https://www.linkedin.com/in/joegallant
+item1.URL:https://www.linkedin.com/in/josephgallant/
 item1.X-ABLabel:LinkedIn
 NOTE:Strategic Automotive Consultant modernizing dealerships through AI integration and operational excellence.
 END:VCARD
